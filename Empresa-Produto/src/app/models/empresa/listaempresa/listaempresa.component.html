@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="label label-light"> {{title}} </h1>
+
+    <button class="btn btn-info" [routerLink]="['/empresa']">Novo</button>
+
+    <div class="margem"></div>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Código</th>
+                <th>Empresa</th>
+                <th>CNPJ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empresa of listagem">
+                <td> {{ empresa.idEmpresa }} </td>
+                <td> {{ empresa.nomeEmpresa }} </td>
+                <td> {{ empresa.cnpj }} </td>
+
+                <td>
+                    <a [routerLink]="['/empresa', empresa.idEmpresa]" class="btn btn-info">
+                        <i class="fa fa-wpforms"></i>
+                    </a>
+                    <a (click)="deleteEmpresa(empresa.idEmpresa)" class="btn btn-danger" id="aClickDesejar">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

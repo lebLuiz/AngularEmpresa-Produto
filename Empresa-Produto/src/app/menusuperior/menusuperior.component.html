@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+
+    <a href="" class="navbar-brand" routerLink="/">
+        <i class="fa fa-home"></i>Home
+    </a>
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#barraNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="barraNav">
+        <div class="container-fluid">
+
+            <div class="row">
+                <ul class="navbar-nav col-lg-5">
+                    <li>
+                        <a [routerLink]="['/empresas']" class="btn btn-primary">
+                            Empresas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

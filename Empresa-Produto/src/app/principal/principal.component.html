@@ -1,0 +1,147 @@
+<app-banner></app-banner> 
+
+<div class="container-fluid">
+    
+    <div class="row">
+
+        <div class="col-md-3" *ngFor="let empresa of list">
+
+              <div class="card">
+                <div class="card-header">
+                    <div class="centralizar">
+                        <app-foto   linkFoto="assets/avatar-company.png"
+                                    titulo="Company" 
+                                    tamanhoFoto="tamanho-img">
+                        </app-foto>
+                    </div>
+                    <h3 class="card-title centralizar"> {{empresa.nomeEmpresa}} </h3>
+                </div>
+                <div class="card-body">
+                    <h6 class="text-secondary"><b>CNPJ:</b> {{ empresa.cnpj }}</h6>
+                    <h6 class="text-secondary"><b>Responsável:</b> {{ empresa.responsavel }} </h6>
+                    <h6 class="text-secondary"><b>Desde:</b> {{ empresa.desdeAno }} </h6>
+                    <h6 class="text-primary"><b>Descrição:</b></h6> <h6 class="text-secondary"> {{ empresa.descricao }} </h6>
+                </div>
+                <div class="centralizar">
+                    <button type="button" class="btn btn-warning" [routerLink]="['/empresa', empresa.idEmpresa]">
+                    Visitar
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+                    <!--<a [routerLink]="['/empresa', empresa.idEmpresa]" class="btn btn-dark" aria-valuetext="">
+                        <i class="fa fa-eye"></i>
+                    </a>-->
+                </div>
+              </div>
+            <div class="margenzinha"></div>    
+          </div>       
+        </div>
+        
+    <!--<div class="row">
+        AQUI SERIA O INICIO DE UM CARD QUE IRÁ CONTER CONTENT
+        
+        <div class="col-md-3">
+            
+            <app-card *ngFor="let empresa of list">
+                <div class="card-body">
+                <div class="card-header">
+                    <h3 class="card-title"> {{empresa.nomeEmpresa}} </h3>
+                </div>
+
+                <div class="centralizar">
+                    <app-foto   linkFoto="assets/avatar-company.png"
+                                titulo="Company" 
+                                tamanhoFoto="tamanho-img">
+                    </app-foto>
+                </div>
+
+                <p class="text-justify">{{empresa.cnpj}}</p>
+
+                <div class="centralizar">
+                    <button type="button" class="btn btn-warning" routerLink="/">
+                    Visitar
+                    </button>
+                </div>
+
+                </div>
+            </app-card>
+
+        </div>
+
+        AQUI SERIA O INICIO DE UM CARD QUE IRÁ CONTER CONTENT-->
+        <!--<div class="col-md-3">
+            
+            <app-card  titlee="blablaDpsArrumo">
+
+                <div class="centralizar">
+                    <app-foto   linkFoto="assets/avatar-company.png"
+                                titulo="Company"
+                                tamanhoFoto="tamanho-img">
+                    </app-foto>
+                </div>
+
+                <p class="text-justify">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Nunc posuere, nisi in maximus viverra, leo mauris luctus
+                    odio, quis finibus ante est eleifend enim. </p>
+
+                <div class="centralizar">
+                    <button type="button" class="btn btn-warning" routerLink="/">
+                    Não Sei Ainda, Depois Arrumo
+                    </button>
+                </div>
+
+            </app-card>
+
+        </div>
+
+        AQUI SERIA O INICIO DE UM CARD QUE IRÁ CONTER CONTENT-->
+        <!--<div class="col-md-3">
+            
+            <app-card  titlee="DpsArrumoBlabla">
+
+                <div class="centralizar">
+                    <app-foto   linkFoto="assets/avatar-company.png"
+                                titulo="Company"
+                                tamanhoFoto="tamanho-img">
+                    </app-foto>
+                </div>
+
+                <p class="text-justify">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Nunc posuere, nisi in maximus viverra, leo mauris luctus
+                    odio, quis finibus ante est eleifend enim. </p>
+
+                <div class="centralizar">
+                    <button type="button" class="btn btn-warning" routerLink="/">
+                    Não Sei Ainda, Depois Arrumo
+                    </button>
+                </div>
+
+            </app-card>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <app-card titlee="DaquiAPoucoArrumo">
+
+                <div class="centralizar">
+                    <app-foto   linkFoto="assets/avatar-company.png"
+                                titulo="Company"
+                                tamanhoFoto="tamanho-img">
+                    </app-foto>
+                </div>
+
+                <p class="text-jusify">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Nunc posuere, nisi in maximus viverra, leo mauris luctus
+                    odio, quis finibus ante est eleifend enim. </p>
+
+                <div class="centralizar">
+                    <button type="button" class="btn btn-warning" routerLink="/">
+                        Não Sei Ainda, Depois Arrumo
+                    </button>
+                </div>
+            </app-card>
+
+        </div>
+        
+    </div>-->
+</div>

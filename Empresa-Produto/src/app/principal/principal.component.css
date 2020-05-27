@@ -1,0 +1,17 @@
+.tua-empresa {
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 40px;
+}
+
+button {
+    margin-bottom: 0.2cm;
+}
+
+.margenzinha {
+    margin: 1.0cm;
+}
+
+.test{
+    display: inline;
+}

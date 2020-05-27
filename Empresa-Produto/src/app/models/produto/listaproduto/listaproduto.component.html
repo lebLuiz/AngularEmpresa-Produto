@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="label label-light"> {{title}} </h1>
+
+    <button class="btn btn-info" [routerLink]="['/produto']">Novo Produto</button>
+
+    <div class="margem"></div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="cor-cod-empresa">Cód. Empresa</th>
+                <th class="cor-cod">Código</th>
+                <th>Produto</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produto of listagem">
+                <td> {{produto.empresa.idEmpresa}} </td>
+                <td> {{produto.idProduto}} </td>
+                <td> {{produto.nomeProduto}} </td>
+                <td>R$ {{produto.valor}} </td>
+<!--
+                <td>
+                    <a [routerLink]="['/produto'], produto.idProduto" class="btn btn-info">
+                        <i class="fa fa-wpforms"></i>
+                    </a>
+                    <a (click)="deleteProduto(produto.idProduto)" class="btn btn-danger">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </td>-->
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,23 @@
+footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    text-align: center;
+    color: rgb(133, 133, 133);
+    z-index: 99999999;
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer p {
+    padding: 1.2px;
+    margin: 0px;
+    line-height: 100%;
+}
+
+footer a {
+    color: var(--light-brown);
+}

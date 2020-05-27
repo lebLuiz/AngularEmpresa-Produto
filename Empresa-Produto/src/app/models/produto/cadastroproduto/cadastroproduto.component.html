@@ -1,0 +1,53 @@
+<h1 class="label label-light centralizar"> {{title}} </h1>
+<form (ngSubmit)="salvar()" class="col-md-5 offset-md-3">
+
+    <app-formulario titulo="ID-Empresa:" forLabel="txtIdE">
+
+        <input  type="text"
+                name="txtIdE"
+                id="txtIdE"
+                placeholder="ID da Empresa"
+                maxlength="3"
+                class="form-control col-md-10"
+                required [(ngModel)]="produto.empresa.idEmpresa">
+                <div class="error"> {{msgDsIdE}} </div>
+
+    </app-formulario>
+
+    <app-formulario titulo="Produto:" forLabel="txtNomeProduto">
+
+        <input  type="text"
+                name="txtNomeProduto"
+                id="txtNomeProduto"
+                placeholder="Nome do Produto"
+                maxlength="60"
+                class="form-control col-md-10"
+                required [(ngModel)]="produto.nomeProduto">
+                <div class="error"> {{msgDsNomeProduto}} </div>
+
+    </app-formulario>
+
+    <app-formulario titulo="Valor:" forLabel="txtValor">
+
+        <input  type="text"
+                name="txtValor"
+                id="txtValor"
+                placeholder="Valor do Produto"
+                maxlength="9"
+                class="form-control col-md-10"
+                required [(ngModel)]="produto.valor">
+                <div class="error"> {{msgDsValor}} </div>
+
+    </app-formulario>
+
+    <div class="centralizar">
+
+        <input type="submit" value="Salvar" class="btn btn-success">
+
+        <div style="margin-right: 10cm;"> </div>
+
+        <input type="button" value="Cancelar" class="btn btn-danger" [routerLink]="['/produtos']">
+
+    </div>
+
+</form>

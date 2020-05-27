@@ -1,0 +1,78 @@
+<h1 class="label label-light centralizar"> {{title}} </h1>
+<form (ngSubmit)="salvar()" class="col-md-5 offset-md-3">
+
+    <div class="ajustButtonProd" *ngIf="title === 'Alterando Empresa'">
+        <input type="button" value="Produtos" class="btn btn-secondary btn-lg" [routerLink]="['/produtos']">
+    </div>
+
+    <!--<app-formulario titulo="Empresa:" forLabel="txtNomeEmpresa">-->
+
+    <h4>Empresa:</h4><input  type="text" 
+                name="txtNomeEmpresa" 
+                id="txtNomeEmpresa" 
+                placeholder="Nome da Empresa"
+                maxlength="90"
+                class="form-control col-md-10"
+                required [(ngModel)]="empresa.nomeEmpresa">
+                <div class="error"> {{msgDsNomeEmpresa}} </div>
+
+    <!--</app-formulario>-->
+
+    <!--<app-formulario titulo="CNPJ:" forLabel="txtCnpj">-->
+
+    <h4>CNPJ:</h4><input  type="text"
+                name="txtCnpj"
+                id="txtCnpj"
+                placeholder="CNPJ da Empresa"
+                maxlength="20"
+                class="form-control col-md-10"
+                required [(ngModel)]="empresa.cnpj">
+                <div class="error"> {{msgDsCnpj}} </div>
+
+    <!--</app-formulario>-->
+
+    <!--<app-formulario titulo="Responsável:" forLabel="txtResponsavel">-->
+    <h4>Responsável:</h4><input  type="text"
+                name="txtResponsavel"
+                id="txtResponsavel"
+                placeholder="Responsável da Empresa"
+                class="form-control col-md-10"
+                required [(ngModel)]="empresa.responsavel">
+                <div class="error"> {{msgDsResponsavel}} </div>
+    <!--</app-formulario>-->
+
+    <!--<app-formulario titulo="Ano de Criação:" forLabel="txtDesdeAno">-->
+    <h4>Desde:</h4><input  type="text"
+                name="txtDesdeAno"
+                id="txtDesdeAno"
+                placeholder="Ano de Criação da Empresa"
+                class="form-control col-md-10"
+                required [(ngModel)]="empresa.desdeAno">
+                <div class="error"> {{msgDsDesdeAno}} </div>
+    <!--</app-formulario>-->
+
+    <!--<app-formulario titulo="Descrição:" forLabel="txtDescricao">-->
+    <h4>Descrição:</h4><div class="input-group">
+            <textarea   class="form-control col-md-15"
+                        name="txtDescricao"
+                        id="txtDescricao"
+                        cols="10"
+                        rows="4"
+                        placeholder="Ex: A empresa é multinacional, atuando no ramo de tecnologia..."
+                        required [(ngModel)]="empresa.descricao">
+            </textarea>
+            <div class="error"> {{msgDsDescricao}} </div>
+        </div>
+    <!--</app-formulario>-->
+
+    <div class="centralizar">
+        <input type="submit" value="Salvar" class="btn btn-success btn-lg">
+
+        <div class="ajustButtonsEnd"></div>
+
+        <input type="button" value="Cancelar" class="btn btn-danger" [routerLink]="['/empresas']"> 
+    </div>
+
+
+    <div class="marginEnd"></div>
+</form>
