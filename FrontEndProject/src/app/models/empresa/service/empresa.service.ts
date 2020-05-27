@@ -8,7 +8,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
-const apiUrl = 'http://localhost:8080/Treinando/EmpresaEndpoint';
+const apiUrl = 'http://localhost:8080/BackEndProject/EmpresaEndpoint';
 
 @Injectable({
   providedIn: 'root'
