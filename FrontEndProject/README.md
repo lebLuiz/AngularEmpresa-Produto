@@ -1,4 +1,10 @@
-# ClientApp
+# NÃO SE ESQUEÇA:
+### Instale o "node_modules" no projeto FrontEndProject
+``` npm install ``` apenas :+1: .
+
+- - - 
+
+# FrontEndProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
